@@ -1,5 +1,6 @@
 html {
     background-color: orange;
+    font-size: 100%;
 }
 
 .elevate {
@@ -17,15 +18,6 @@ html {
     transform: translate(-50%, -50%);
 }
 
-.sixteen-nine {
-    width: 75vw;
-    height: calc(0.5625 * 75vw);
-}
-
-.card {
-    background-color: black;
-}
-
 .card > .title {
     font-family: 'Bangers';
     font-style: normal;
@@ -33,8 +25,45 @@ html {
     line-height: 1.10909;
     color: white;
     text-align: center;
+    font-size: 1rem;
 }
 
 .card > .content {
     margin: auto;
+}
+
+@media (orientation: landscape) {
+    .sixteen-nine {
+        width: 100vh;
+        height: calc(0.5625 * 100vh);
+    }
+
+    .card {
+        width: 100vh;
+    }
+
+    .card > .title {
+        font-size: 0.5rem;
+    }
+}
+
+@media (orientation: portrait) {
+    .sixteen-nine {
+        width: 90vw;
+        height: calc(0.5625 * 90vw);
+    }
+
+    .card {
+        width: 90vw;
+    }
+}
+
+.card {
+    background-color: black;
+}
+
+@media only screen and (min-height: 500px) and (min-width: 500px) {
+    .card > .title {
+        font-size: 1.5rem;
+    }
 }
